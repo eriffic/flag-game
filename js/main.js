@@ -19,10 +19,10 @@ function getQuestions() {
         if (this.readyState === 4 && this.status === 200) {
             let questions = JSON.parse(this.responseText);
             //Number Of Question Each New Game
-            let qCount = 10;
+            let qCount = 50;
             questionNum(qCount);
             //Random Question Each New Game
-            questions = questions.sort(() => Math.random() - Math.random()).slice(0, 10);
+            questions = questions.sort(() => Math.random() - Math.random()).slice(0, 50);
 
             //Add Questions Data
             addQuestionData(questions[currentIndex], qCount);
